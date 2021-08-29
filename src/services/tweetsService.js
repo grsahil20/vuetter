@@ -11,7 +11,14 @@ const apiClient = axios.create({
   },
 });
 
-export const getTweets = async (userId = null) =>
-  userId
-    ? await apiClient.get(`/users/${userId}/tweets`)
-    : await apiClient.get("/tweets");
+export const getTweets = async (options = {}) => {
+  const page = options.page || 1;
+  const perPage = options.perPage || 20;
+  const userId = options.userId;
+  const route = userId
+    ? `/users/${userId}/tweets?page=${page}&per_page=${perPage}`
+    : `/tweets?page=${page}&per_page=${perPage}`;
+
+  console.log(route);
+  return (await apiClient.get(route)).data;
+};

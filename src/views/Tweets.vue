@@ -24,7 +24,10 @@ export default {
     };
   },
   async created() {
-    this.tweetsApiResponse = (await getTweets()).data;
+    this.tweetsApiResponse = await getTweets({
+      page: this.$route.query.page,
+      perPage: this.$route.query.perPage,
+    });
   },
 };
 </script>
