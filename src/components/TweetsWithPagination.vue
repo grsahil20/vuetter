@@ -18,7 +18,7 @@ import Tweet from "@/components/Tweet.vue";
 import PaginationNav from "@/components/PaginationNav.vue";
 
 export default {
-  name: "Home",
+  name: "TweetsWithPagination",
   components: {
     Tweet,
     PaginationNav,

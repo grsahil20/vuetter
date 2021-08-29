@@ -18,7 +18,7 @@ import User from "@/components/User.vue";
 import PaginationNav from "@/components/PaginationNav.vue";
 
 export default {
-  name: "Home",
+  name: "UsersWithPagination",
   components: {
     User,
     PaginationNav,

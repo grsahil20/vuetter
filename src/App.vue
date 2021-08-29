@@ -1,8 +1,15 @@
 <template>
-  <div>
-    <router-link :to="{ name: 'Tweets' }">Home</router-link> |
-    <router-link :to="{ name: 'Users' }">Users</router-link> |
-    <router-link :to="{ name: 'About' }">About</router-link>
-  </div>
+  <HeaderNav />
   <router-view />
 </template>
+
+<script>
+import HeaderNav from "@/components/HeaderNav.vue";
+
+export default {
+  name: "App",
+  components: {
+    HeaderNav,
+  },
+};
+</script>
