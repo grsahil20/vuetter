@@ -1,16 +1,16 @@
 <template>
   <div class="hello">
-    <span>{{ tweet.id }}</span
+    <span>{{ user.id }}</span
     >&nbsp;
-    <span>{{ tweet.body }}</span>
+    <span>{{ user.email }}</span>
   </div>
 </template>
 
 <script>
 export default {
-  name: "Tweet",
+  name: "User",
   props: {
-    tweet: Object,
+    user: Object,
   },
 };
 </script>

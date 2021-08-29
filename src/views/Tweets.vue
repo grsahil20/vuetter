@@ -14,7 +14,7 @@ import { getTweets } from "@/services/tweetsService"; // @ is an alias to /src
 import TweetsWithPagination from "@/components/TweetsWithPagination.vue";
 
 export default {
-  name: "Home",
+  name: "Tweets",
   components: {
     TweetsWithPagination,
   },
